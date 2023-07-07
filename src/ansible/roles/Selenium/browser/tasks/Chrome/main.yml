@@ -1,13 +1,15 @@
 - shell: "google-chrome --version"
   register: chrome
 
+- name: Set driver dir
+  set_fact:
+    this_driver: "chromedriver_{{ os_arch }}"
+
 - name: Get Chrome version
   set_fact:
     this_name: "Chrome"
     this_version: "{{ chrome.stdout.split('.')[0] | replace('Google Chrome ','') }}"
-    this_file_name: "chromedriver_{{os_arch}}.zip"
-    webdriver_path: "{{webdriver_path + mirror_dir + '/chromedriver_linux64'}}"
+    this_file_name: "{{ this_driver }}.zip"
+    webdriver_path: "{{ webdriver_path + ava_dir + '/' + this_driver }}"
 
-- include_tasks: "fn/append.yml"
-
-- include_tasks: "fn/get_release.yml"
+- include_tasks: "fn/_all.yml"

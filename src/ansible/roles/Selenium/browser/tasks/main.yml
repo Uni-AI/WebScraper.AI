@@ -1,7 +1,4 @@
-- include_tasks: "{{item}}/main.yml"
+- include_tasks: "{{i}}/main.yml"
   loop: "{{browsers.keys()|list}}"
-
-# - include_tasks: "fn/environment variable.yml"
-
-- debug:
-    msg: "PATH {{webdriver_path}}"
+  loop_control:
+    loop_var: i

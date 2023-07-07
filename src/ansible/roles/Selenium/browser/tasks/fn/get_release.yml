@@ -1,15 +1,17 @@
 - name: Create a directory
   ansible.builtin.file:
-    path: "{{mirror_dir}}"
+    path: "{{item}}"
     state: directory
+  loop:
+  - "{{mirror_dir}}"
+  - "{{ava_dir}}"
+
 
 - name: Download WebDriver
   ansible.builtin.get_url:
-    url: "{{webdriver[this.key][ this.value.version | int ][os_arch]}}"
-    dest: "{{mirror_dir}}/{{browsers[this.key]['file_name']}}"
+    url: "{{webdriver[item.key][ item.value.version | int ][os_arch]}}"
+    dest: "{{mirror_dir}}/{{browsers[item.key]['file_name']}}"
   loop: "{{ browsers | dict2items }}"
-  loop_control:
-    loop_var: this
 
 
 # - debug:

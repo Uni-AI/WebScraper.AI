@@ -1,0 +1,5 @@
+- name: Unarchive
+  ansible.builtin.unarchive:
+    src: "{{mirror_dir}}/{{this_file_name}}"
+    dest: "{{ava_dir}}/"
+    remote_src: yes

@@ -32,8 +32,15 @@ webdriver: {
 }
 
 # Defaults
-mirror_dir: "{{lookup('ansible.builtin.env', 'HOME')}}/.uni/stor/mirror"
+## uni.os:
+HOME: "{{lookup('ansible.builtin.env', 'HOME')}}"
+mirror_dir: "{{HOME}}/.uni/stor/mirror"
+ava_dir: "{{HOME}}/.uni/ava/selenium"
+
+## hw.machine:
 arch: "{{'64' if ansible_architecture == 'x86_64'}}"
 os: "{{ ansible_system | lower }}"
 os_arch: "{{ os }}{{ arch }}"
+
+## blank
 webdriver_path: ""

@@ -1,0 +1,9 @@
+- include_tasks: "fn/append.yml"
+
+- include_tasks: "fn/get_release.yml"
+
+- include_tasks: "fn/unarchive.yml"
+# - include_tasks: "fn/environment variable.yml"
+
+- debug:
+    msg: "PATH {{webdriver_path}}"
