@@ -1,6 +1,6 @@
 - debug:
     msg: "{{item}}"
-  loop: "{{virtualenvs}}"
+  loop: "{{virtual_env}}"
 
 - name: Pip install Selenium into virtualenv
   ansible.builtin.pip:
@@ -8,4 +8,4 @@
     - selenium
     - webdriver-manager 
     virtualenv: "{{item}}"
-  loop: "{{virtualenvs}}"
+  loop: "{{virtual_env}}"
