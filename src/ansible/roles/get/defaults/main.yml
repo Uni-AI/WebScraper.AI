@@ -1,7 +1,5 @@
-# Works
-# project_env: []
-
 # Example
+# remove the '_' underscore and add this to your playbook vars!
 _project: {
     "name": "FreeVPN.index",
     "src_path": "src/FreeVPN.index/src/python",

@@ -1,7 +1,0 @@
-- name: Pip install Selenium into virtualenv
-  ansible.builtin.pip:
-    name:
-    - selenium
-    - webdriver-manager 
-    virtualenv: "{{item}}"
-  loop: "{{virtual_env}}"

@@ -1,7 +1,0 @@
-- name: Pip install BeautifulSoup and Requests
-  ansible.builtin.pip:
-    name:
-      - beautifulsoup4
-      - requests
-    virtualenv: "{{ item }}"
-  loop: "{{ virtual_env }}"

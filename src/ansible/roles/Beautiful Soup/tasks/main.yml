@@ -1,1 +1,4 @@
-- include_tasks: 'common/pip.yml'
+- name: Pip install BeautifulSoup
+  include_tasks: "{{fn}}/Pip_install.yml"
+  loop:
+  - beautifulsoup4

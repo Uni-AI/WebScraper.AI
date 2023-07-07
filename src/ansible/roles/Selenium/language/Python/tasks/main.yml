@@ -1,1 +1,5 @@
-- include_tasks: 'common/pip.yml'
+- name: Pip install Selenium
+  include_tasks: "{{fn}}/Pip_install.yml"
+  loop:
+  - selenium
+  - webdriver-manager 

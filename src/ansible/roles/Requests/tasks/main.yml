@@ -1,1 +1,4 @@
-requests
+- name: Pip install Requests
+  include_tasks: "{{fn}}/Pip_install.yml"
+  loop:
+  - requests
