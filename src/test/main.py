@@ -1,5 +1,5 @@
 from browser.Chromium import *
-# from browser.Chrome import *
+from browser.Chrome import *
 
-# test_chrome()
+test_chrome()
 test_chromium()

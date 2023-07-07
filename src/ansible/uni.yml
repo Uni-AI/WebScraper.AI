@@ -4,6 +4,8 @@
     # Host_vars
     ansible_become_password: u
     ansible_user: "{{lookup('ansible.builtin.env', 'USER')}}"
+    #
+    reinstall: false # True
 
   roles:
-  - Selenium
+    - Selenium
