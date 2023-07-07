@@ -1,4 +1,12 @@
 - debug:
-    msg: "{{item}}"
+    msg: "Project -- {{project_env}}"
+  when: Debug
+
+- debug:
+    msg: "venv -- {{item}}"
   loop: "{{virtual_env}}"
+  when: Debug
+
+- name: Exit
+  ansible.builtin.meta: end_play
   when: Debug

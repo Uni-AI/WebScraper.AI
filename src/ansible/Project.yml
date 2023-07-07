@@ -1,8 +1,6 @@
 - name: Setup Web-Scraping Libraries
   hosts: localhost # , fedora, ubuntu
   vars:
-    home: "{{lookup('ansible.builtin.env', 'HOME')}}"
-
     project: {
       "src_path": "PycharmProjects/LearnScraping",
     }

@@ -1,4 +1,4 @@
-## Try
+## Works!
 home: "{{lookup('ansible.builtin.env', 'HOME')}}"
 
 # User's

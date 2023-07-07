@@ -1,1 +1,10 @@
-.example.yml
+# Works
+# project_env: []
+
+# Example
+_project: {
+    "name": "FreeVPN.index",
+    "src_path": "src/FreeVPN.index/src/python",
+  }
+
+Debug: true # false

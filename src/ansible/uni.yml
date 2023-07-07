@@ -1,7 +1,6 @@
 - name: Setup Web-Scraping Libraries
   hosts: localhost # , fedora, ubuntu
   vars:
-    virtual_env: ["{{test_env}}"]
     # Host_vars
     ansible_become_password: u
     ansible_user: "{{lookup('ansible.builtin.env', 'USER')}}"
