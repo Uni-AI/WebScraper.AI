@@ -20,7 +20,7 @@
     path: "{{ lookup('ansible.builtin.env', 'HOME') }}/{{item}}"
     create: true
     marker_begin: "<Selenium WebDriver"
-    marker_end: "WebDriver/>"
+    marker_end: "Selenium WebDriver/>"
     block: |
-      export PATH=$PATH:{{webdriver_paths}}
+      export PATH=$PATH:{{webdriver_path}}
   loop: "{{profile_file}}"

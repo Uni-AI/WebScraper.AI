@@ -1,6 +1,0 @@
----
-- name: Install 
-  ansible.builtin.apt:
-    pkg:
-    - htop
-  become: true
