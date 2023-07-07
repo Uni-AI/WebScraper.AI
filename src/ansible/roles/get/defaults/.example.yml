@@ -1,8 +1,13 @@
-example_project: {
+_example_project: {
     "name": "FreeVPN.index",
     "src_path": "src/FreeVPN.index/src/python"
   }
 
 project_env: "{{lookup('ansible.builtin.env', 'HOME')}}/{{project.src_path}}/venv"
+
+# Default
+virtual_env: ["{{test_env}}"]
+# virtual_env: ["{{test_env}}","{{project_env}}"]
+
 
 Debug: false
