@@ -2,10 +2,16 @@ arch: "{{'64' if ansible_architecture == 'x86_64'}}"
 os: "{{ ansible_system | lower }}"
 os_arch: "{{ os }}{{ arch }}"
 
+# Future: use JSON file instead!
+
 webdriver: {
   "Chrome": {
     "Home": {
+      "site": "https://chromedriver.chromium.org/home",
       "release": "https://chromedriver.chromium.org/downloads",
+      "doc": {
+        "Android": "https://chromedriver.chromium.org/getting-started/getting-started---android"
+        },
       },
     114: {
       "linux64": "https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip",

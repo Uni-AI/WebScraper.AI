@@ -10,3 +10,4 @@
 - include_tasks: "fn/append.yml"
 
 - include_tasks: "fn/get_release.yml"
+
