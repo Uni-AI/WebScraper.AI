@@ -1,3 +1,5 @@
 from browser.Chromium import *
+# from browser.Chrome import *
 
-test()
+# test_chrome()
+test_chromium()
