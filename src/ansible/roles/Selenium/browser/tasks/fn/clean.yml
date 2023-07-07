@@ -1,0 +1,7 @@
+- name: Cleanup Old install
+  ansible.builtin.file:
+    path: "{{item}}"
+    state: absent
+  loop:
+  - "{{mirror_dir}}/{{this_file_name}}"
+  - "{{ava_dir}}/{{this_driver}}"

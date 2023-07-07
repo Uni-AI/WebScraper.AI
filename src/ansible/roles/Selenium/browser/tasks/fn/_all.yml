@@ -1,3 +1,6 @@
+- include_tasks: "fn/clean.yml"
+  when: reinstall
+
 - include_tasks: "fn/append.yml"
 
 - include_tasks: "fn/get_release.yml"

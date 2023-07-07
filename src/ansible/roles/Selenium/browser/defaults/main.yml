@@ -26,3 +26,5 @@ future: {
 default_browser: {}
 
 browsers: "{{ my_browser | ansible.builtin.combine(default_browser) }}"
+
+reinstall: True
