@@ -1,5 +1,5 @@
-this_env: "{{ playbook_dir | dirname }}/python/venv"
+test_env: "{{ playbook_dir | dirname }}/test/python/venv"
 
-virtual_env: ["{{this_env}}"]
+virtual_env: ["{{test_env}}"]
 # Debug
-# virtual_env: ["{{test_env}}","{{this_env}}"]
+# virtual_env: ["{{test_env}}","{{project_env}}"]

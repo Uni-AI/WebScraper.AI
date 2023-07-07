@@ -1,1 +1,6 @@
-test_env: "{{ playbook_dir | dirname }}/test/venv"
+project: {
+    "name": "FreeVPN.index",
+    "src_path": "src/FreeVPN.index/src/python"
+  }
+
+project_env: "{{lookup('ansible.builtin.env', 'HOME')}}/{{project.src_path}}/venv"
