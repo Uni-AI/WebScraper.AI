@@ -1,7 +1,7 @@
-- name: Pip install Selenium into virtualenv
+- name: Pip install BeautifulSoup & Requests
   ansible.builtin.pip:
     name:
-    - selenium
-    - webdriver-manager 
+    - beautifulsoup4
+    - requests
     virtualenv: "{{item}}"
   loop: "{{virtual_env}}"

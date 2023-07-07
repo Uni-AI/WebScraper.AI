@@ -8,4 +8,5 @@
     reinstall: false # True
 
   roles:
+    - Beautiful Soup
     - Selenium

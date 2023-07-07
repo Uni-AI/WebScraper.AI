@@ -1,3 +1,4 @@
 dependencies:
+- get
 - Selenium/language/Python
 - Selenium/browser
