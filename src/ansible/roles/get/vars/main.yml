@@ -1,16 +1,12 @@
-## Try
 home: "{{lookup('ansible.builtin.env', 'HOME')}}"
 
 # User's
-users_env: "{% if project is defined and project %} {{home}}/{{ project.src_path }}/venv {% endif %}" # if defined and Not empty
-project_env: ["{{users_env}}"]
+project_env: ["{% if project is defined and project %} {{home}}/{{ project.src_path }}/venv {% endif %}"] # if defined and Not empty
 
 # Default
 test_env: ["{{ playbook_dir | dirname }}/test/python/venv"]
 
-# Combine default & user's
-virtual_env: "{{project_env + test_env}}"
+# Combine user's & default
+combined: "{{project_env + test_env}}"
 
-# Works:
-# virtual_env: "{{test_env}}"
-# virtual_env: "{{project_env}}"
+virtual_env: "{{combined | select()}}" # Removes empty list items!
