@@ -1,5 +1,30 @@
-- name: Download WebDriver
-  ansible.builtin.get_url:
-    url: "{{webdriver[item.name][item.version][os_arch]}}"
-    dest: "{{mirror_dir}}/chromedriver_{{os_arch}}.zip"
-  loop: "{{browsers}}"
+# - name: Download WebDriver
+#   ansible.builtin.get_url:
+#     # url: "{{webdriver[item.name][item.version][os_arch]}}"
+#     url: "{{webdriver[i][version][os_arch]}}"
+#     dest: "{{mirror_dir}}/{{browsers[i]['file_name']}}"
+# #   loop: "{{browsers}}"
+#   loop: "{{browsers.keys()|list}}"
+#   loop_control:
+#     loop_var: i
+
+
+# - debug:
+#     msg: "All : {{browsers.Chrome.version}}"
+
+# - name: works
+#   debug:
+#     msg: "Each {{i}} ver {{browsers[i]['version']}} to {{browsers[i]['file_name']}}"
+#     msg: "{{webdriver[i][version][os_arch]}}"
+#   loop: "{{browsers.keys()|list}}"
+#   loop_control:
+#     loop_var: i
+
+# Old
+# msg: "{{browsers[i]['version']}}"
+
+- debug:
+    # msg: "{{item.key}}"
+    msg: "Name {{item.key}}"
+    # msg: "{{item.key}} of Version {{item.value.version}}"
+  loop: "{{ browsers | dict2items }}"

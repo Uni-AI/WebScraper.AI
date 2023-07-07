@@ -1,10 +1,26 @@
 # Overwrite to add your own
-my_browser: [
-  {"name": "Chrome", "version": },
-]
+# my_browser: [
+#   {"name": "Chrome", "version": },
+# ]
 
-default_browser: [
-  {"name": "Firefox", "version": 0.33},
-]
+# default_browser: [
+#   {"name": "Firefox", "version": 0.33},
+# ]
 
-browsers: "{{ default_browser + my_browser }}"
+# browsers: "{{ default_browser + my_browser }}"
+
+my_browser: {
+  "Chrome": {
+    "version": "",
+    "file_name": "",
+  },
+}
+
+default_browser: {
+  "Firefox": {
+    "version": "",
+    "file_name": "",
+  },
+}
+
+browsers: "{{ my_browser | ansible.builtin.combine(default_browser) }}"

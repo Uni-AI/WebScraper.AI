@@ -1,0 +1,7 @@
+- name: New Browser
+  set_fact:
+    this_browser: '{ "{{this_name}}": { "version": "{{this_version}}", "file_name": "{{this_file_name}}",} }'
+
+- name: Combine Browser dicts
+  set_fact:
+    browsers: "{{ browsers | ansible.builtin.combine( this_browser ) }}"
