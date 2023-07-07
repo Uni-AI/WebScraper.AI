@@ -1,12 +1,18 @@
-- debug:
-    msg: "Project -- {{project_env}}"
-  when: debug
+- name: Debug and exit
+  block:
+  - debug:
+      msg: "Project -- {{project_env}}"
 
-- debug:
-    msg: "venv -- {{item}}"
-  loop: "{{virtual_env}}"
-  when: debug
+  - debug:
+      msg: "Venv's -- {{virtual_env}}"
 
-- name: Exit
-  ansible.builtin.meta: end_play
+  - debug:
+      msg: "Type of virtual_env: {{virtual_env | type_debug }}"
+
+  - debug:
+      msg: "each -- {{item}}"
+    loop: "{{virtual_env}}"
+
+  - name: Exit
+    ansible.builtin.meta: end_play
   when: debug

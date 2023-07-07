@@ -3,14 +3,14 @@ home: "{{lookup('ansible.builtin.env', 'HOME')}}"
 
 # User's
 users_env: "{% if project is defined %} {{home}}/{{ project.src_path }}/venv {% endif %}"
-project_env: "[{{users_env}}]"
+project_env: ["{{users_env}}"]
 
 # Default
 test_env: ["{{ playbook_dir | dirname }}/test/python/venv"]
 
 # Combine default & user's
-# virtual_env: ["{% if project_env %} {{project_env}} {% else %} {{test_env}} {% endif %}"] # if defined and Not empty
+virtual_env: "{% if project_env %} {{project_env}} {% else %} {{test_env}} {% endif %}" # if defined and Not empty
 
 
-# Broken
-virtual_env: "{{test_env}}"
+# Works:
+# virtual_env: "{{test_env}}"
