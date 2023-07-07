@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e8aebea-53fd-4d58-b063-55a9a4541378" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../python/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/.idea/WebScraper.AI.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/.idea/dbnavigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../python/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/browser/Chrome.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/browser/Chromium.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/browser/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/browser/debug/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-    </list>
+    <list default="true" id="5e8aebea-53fd-4d58-b063-55a9a4541378" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
