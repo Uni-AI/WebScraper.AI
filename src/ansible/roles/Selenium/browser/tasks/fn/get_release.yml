@@ -5,13 +5,14 @@
 
 - name: Download WebDriver
   ansible.builtin.get_url:
-    url: "{{webdriver[item.key][ item.value.version | int ][os_arch]}}"
-    dest: "{{mirror_dir}}/{{browsers[item.key]['file_name']}}"
+    url: "{{webdriver[this.key][ this.value.version | int ][os_arch]}}"
+    dest: "{{mirror_dir}}/{{browsers[this.key]['file_name']}}"
   loop: "{{ browsers | dict2items }}"
+  loop_control:
+    loop_var: this
 
-# - debug:
-#     msg: "All : {{browsers.Chrome.version}}"
 
 # - debug:
 #     msg: "URL {{webdriver[item.key][ item.value.version | int ][os_arch]}}  Dir {{mirror_dir}}/{{browsers[item.key]['file_name']}}"
+#     msg: "All : {{browsers.Chrome.version}}"
 #   loop: "{{ browsers | dict2items }}"
