@@ -4,6 +4,3 @@
     pkg:
     - htop
   become: true
-
-- include_tasks: "common/{{ubuntu_default}}/main.yml"
-

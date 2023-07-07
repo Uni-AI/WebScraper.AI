@@ -1,0 +1,4 @@
+this_env: "{{ playbook_dir | dirname }}/python/venv"
+
+# virtual_envs: [test_env,this_env]
+virtual_envs: [test_env]

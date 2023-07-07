@@ -1,0 +1,3 @@
+dependencies:
+# - Selenium/WebDriver
+- Selenium/language/Python
