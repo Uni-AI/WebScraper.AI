@@ -1,8 +1,4 @@
-arch: "{{'64' if ansible_architecture == 'x86_64'}}"
-os: "{{ ansible_system | lower }}"
-os_arch: "{{ os }}{{ arch }}"
-
-# Future: use JSON file instead!
+# Future: load from a JSON file instead!
 
 webdriver: {
   "Chrome": {
@@ -35,4 +31,9 @@ webdriver: {
   }
 }
 
+# Defaults
 mirror_dir: "{{lookup('ansible.builtin.env', 'HOME')}}/.uni/stor/mirror"
+arch: "{{'64' if ansible_architecture == 'x86_64'}}"
+os: "{{ ansible_system | lower }}"
+os_arch: "{{ os }}{{ arch }}"
+webdriver_path: ""

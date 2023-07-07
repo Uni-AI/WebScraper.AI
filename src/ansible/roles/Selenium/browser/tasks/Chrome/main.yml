@@ -6,8 +6,8 @@
     this_name: "Chrome"
     this_version: "{{ chrome.stdout.split('.')[0] | replace('Google Chrome ','') }}"
     this_file_name: "chromedriver_{{os_arch}}.zip"
+    webdriver_path: "{{webdriver_path + mirror_dir + '/chromedriver_linux64'}}"
 
 - include_tasks: "fn/append.yml"
 
 - include_tasks: "fn/get_release.yml"
-
