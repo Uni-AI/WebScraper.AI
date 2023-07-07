@@ -1,9 +1,9 @@
 - name: Setup Web-Scraping Libraries
   hosts: localhost # , fedora, ubuntu
   vars:
-    project: {
-      "src_path": "PycharmProjects/LearnScraping",
-    }
+    # project: {
+    #   "src_path": "PycharmProjects/LearnScraping",
+    # }
 
     # Host_vars
     ansible_become_password: u
