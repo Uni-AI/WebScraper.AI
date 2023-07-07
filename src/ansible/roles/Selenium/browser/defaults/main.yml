@@ -1,0 +1,7 @@
+# Overwrite to add your own
+# my_browser: ["Chrome"]
+my_browser: []
+
+default_browser: ["Firefox"]
+
+browsers: "{{ default_browser + my_browser }}"

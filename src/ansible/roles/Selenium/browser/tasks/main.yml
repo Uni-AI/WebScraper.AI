@@ -1,0 +1,6 @@
+# - include_tasks: "{{item}}/main.yml"
+#   loop: "{{browsers}}"
+
+- debug:
+    msg: "{{item}}"
+  loop: "{{browsers}}"
