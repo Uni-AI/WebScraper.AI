@@ -1,4 +1,4 @@
-project: {
+example_project: {
     "name": "FreeVPN.index",
     "src_path": "src/FreeVPN.index/src/python"
   }

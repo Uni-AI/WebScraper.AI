@@ -1,0 +1,16 @@
+- name: Setup Web-Scraping Libraries
+  hosts: localhost # , fedora, ubuntu
+  vars:
+    # Host_vars
+    ansible_become_password: u
+    ansible_user: "{{lookup('ansible.builtin.env', 'USER')}}"
+    #
+    reinstall: false
+
+    project: {
+      "src_path": "PycharmProjects/LearnScraping",
+    }
+
+  roles:
+    - Beautiful Soup
+    - Selenium
