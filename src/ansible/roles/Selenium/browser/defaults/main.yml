@@ -16,11 +16,13 @@ my_browser: {
   },
 }
 
-default_browser: {
+future: {
   "Firefox": {
     "version": "",
     "file_name": "",
   },
 }
+
+default_browser: {}
 
 browsers: "{{ my_browser | ansible.builtin.combine(default_browser) }}"

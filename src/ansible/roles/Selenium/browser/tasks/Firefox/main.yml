@@ -1,0 +1,9 @@
+- name: Get Chrome version
+  set_fact:
+    this_name: "Firefox"
+    this_version: "0.33"
+    this_file_name: "geckodriver-v{{this_version}}.0-{{os_arch}}.tar.gz"
+
+- include_tasks: "fn/append.yml"
+
+- include_tasks: "fn/get_release.yml"
