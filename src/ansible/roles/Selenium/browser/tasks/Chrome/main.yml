@@ -1,0 +1,14 @@
+- shell: "google-chrome --version"
+  register: chrome_vers_raw
+
+- name: Get Chrome version
+  set_fact:
+    browsers.Chrome.version: "{{ chrome_vers_raw.stdout.split('.')[0] | replace('Google Chrome ','') }}"
+
+# - include_tasks: "fn/get_release.yml"
+
+- debug:
+    msg: "Hello from {{this.name}} version {{this.version}}!"
+  loop: "{{browsers}}"
+  loop_control:
+    loop_var: this

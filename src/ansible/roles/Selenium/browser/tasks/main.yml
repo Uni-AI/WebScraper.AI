@@ -1,6 +1,8 @@
-# - include_tasks: "{{item}}/main.yml"
-#   loop: "{{browsers}}"
+- name: Create a directory
+  ansible.builtin.file:
+    path: "{{mirror_dir}}"
+    state: directory
 
-- debug:
-    msg: "{{item}}"
+
+- include_tasks: "{{item.name}}/main.yml"
   loop: "{{browsers}}"

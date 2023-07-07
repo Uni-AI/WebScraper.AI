@@ -1,9 +1,32 @@
-home: "https://chromedriver.chromium.org/downloads"
+arch: "{{'64' if ansible_architecture == 'x86_64'}}"
+os: "{{ ansible_system | lower }}"
+os_arch: "{{ os }}{{ arch }}"
 
-chrome_driver: {
-  114: {
-    "version": 114,
-    "linux": "https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip",
-    "macos_arm64": "https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_mac_arm64.zip",
+webdriver: {
+  "Chrome": {
+    "Home": {
+      "release": "https://chromedriver.chromium.org/downloads",
+      },
+    114: {
+      "linux64": "https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip",
+      "macos_arm64": "https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_mac_arm64.zip",
+    },
+    113: {
+      "linux64": "todo",
+      "macos_arm64": "todo",
+    },
   },
+  "Firefox": {
+    "Home": {
+      "site": "",
+      "doc": "https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/firefox.html",
+      "release": "https://github.com/mozilla/geckodriver/releases/",
+    },
+    0.33: {
+      "version": 0.33,
+      "linux64": "https://github.com/mozilla/geckodriver/releases/download/v0.33.0/geckodriver-v0.33.0-linux-aarch64.tar.gz",
+    },
+  }
 }
+
+mirror_dir: "{{lookup('ansible.builtin.env', 'HOME')}}/.uni/stor/mirror"
