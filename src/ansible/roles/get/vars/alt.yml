@@ -1,3 +1,0 @@
-## Alt
-virtual_env: "{{test_env + [project_env]}}"
-virtual_env: ["{% if project_env %} {{project_env}} {% endif %}"]

@@ -1,0 +1,5 @@
+## Alt
+virtual_env: "{{test_env + [project_env]}}"
+
+# Combine default & user's
+virtual_env: ["{% if project_env %} {{project_env + test_env}} {% else %} {{test_env}} {% endif %}"] # if defined and Not empty

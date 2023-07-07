@@ -9,4 +9,8 @@ project_env: "[{{users_env}}]"
 test_env: ["{{ playbook_dir | dirname }}/test/python/venv"]
 
 # Combine default & user's
-virtual_env: ["{% if project_env %} {{project_env}} {% else %} {{test_env}} {% endif %}"] # if defined and Not empty
+# virtual_env: ["{% if project_env %} {{project_env}} {% else %} {{test_env}} {% endif %}"] # if defined and Not empty
+
+
+# Broken
+virtual_env: "{{test_env}}"

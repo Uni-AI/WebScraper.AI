@@ -9,4 +9,4 @@
 
   roles:
     - Beautiful Soup
-    - Selenium
+    # - Selenium

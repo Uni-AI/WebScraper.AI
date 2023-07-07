@@ -7,4 +7,4 @@ _project: {
     "src_path": "src/FreeVPN.index/src/python",
   }
 
-Debug: true # false
+debug: false

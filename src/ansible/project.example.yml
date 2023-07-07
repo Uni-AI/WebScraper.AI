@@ -10,7 +10,7 @@
     ansible_user: "{{lookup('ansible.builtin.env', 'USER')}}"
     #
     reinstall: false
-    Debug: true
+    debug: true
 
   roles:
     - Beautiful Soup
