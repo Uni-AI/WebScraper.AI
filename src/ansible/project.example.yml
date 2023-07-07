@@ -4,7 +4,6 @@
     project: {
       "src_path": "PycharmProjects/LearnScraping",
     }
-    virtual_env: ["{{project_env}}"]
 
     # Host_vars
     ansible_become_password: u
