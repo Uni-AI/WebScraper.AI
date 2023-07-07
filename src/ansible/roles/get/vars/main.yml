@@ -2,8 +2,7 @@
 home: "{{lookup('ansible.builtin.env', 'HOME')}}"
 
 # User's
-# users_env: "{% if project is defined %} {{home}}/{{ project.src_path }}/venv {% endif %}"
-users_env: "{% if _project is defined %} {{home}}/{{ _project.src_path }}/venv {% endif %}"
+users_env: "{% if project is defined %} {{home}}/{{ project.src_path }}/venv {% endif %}"
 project_env: "[{{users_env}}]"
 
 # Default
