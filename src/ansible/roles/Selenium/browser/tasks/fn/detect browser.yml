@@ -1,0 +1,8 @@
+- name: which Chrome
+  shell: which google-chrome
+  register: which
+  failed_when: false
+
+- name: Set Chrome
+  ansible.builtin.set_fact:
+    chrome: "{{not which.rc}}"
