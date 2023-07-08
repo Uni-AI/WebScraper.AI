@@ -1,4 +1,4 @@
-vagrant: true
+vagrant: false
 
 # Change this file to add dependency artifacts, repos, & roles!
 repo: [
