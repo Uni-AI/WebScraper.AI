@@ -2,7 +2,7 @@ vagrant: true
 
 # Change this file to add dependency artifacts, repos, & roles!
 repo: [
-  { repo: "https://github.com/Source-Graph/Virtualenv.python.git"},
+  { repo: "https://github.com/Source-Graph/Virtualenv.python.git", name: "Virtualenv.python"},
   ]
 
 role: [
