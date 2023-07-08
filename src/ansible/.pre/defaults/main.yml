@@ -1,0 +1,21 @@
+vagrant: true
+
+# Change this file to add dependency artifacts, repos, & roles!
+repo: [
+  { repo: "https://github.com/Source-Graph/Virtualenv.python.git"},
+  ]
+
+role: [
+  { git: "Virtualenv.python", name: "Virtualenv", path: "src/ansible/Virtualenv"},
+  ]
+
+library: [
+  # { git: "getGPU", name: "get_gpu.py", path: "src/ansible/library"},
+  ]
+
+# set Inventory
+dynamic_inventory: "{{static_inventory}}"
+test_inventory: true
+
+# dependencies
+git_fetch_update: true
