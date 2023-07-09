@@ -9,4 +9,3 @@
 - ansible.builtin.include_tasks: library.yml
 
 - ansible.builtin.include_tasks: link in roles_dir.yml
-  when: vagrant
