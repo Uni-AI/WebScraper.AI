@@ -1,6 +1,6 @@
 - include_tasks: fn/detect browser.yml
 
-#- include_tasks: "{{i}}/main.yml"
-#  loop: "{{browsers.keys()|list}}"
-#  loop_control:
-#    loop_var: i
+- include_tasks: "{{i}}/main.yml"
+  loop: "{{browsers.keys()|list}}"
+  loop_control:
+    loop_var: i

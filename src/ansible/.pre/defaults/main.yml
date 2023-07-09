@@ -7,7 +7,7 @@ repo: [
   ]
 
 role: [
-  { git: "Browser", name: "Browser", path: "src/ansible/Browser"},
+  { git: "Browser", name: "Browser", path: "src/ansible/roles/Browser"},
   { git: "Virtualenv.python", name: "Virtualenv", path: "src/ansible/Virtualenv"},
   ]
 

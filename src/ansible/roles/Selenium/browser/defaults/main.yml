@@ -14,8 +14,9 @@ future: {
   },
 }
 
-default_browser: {}
+default_browser: {"Chrome"}
 
 browsers: "{{ my_browser | ansible.builtin.combine(default_browser) }}"
 
+# Clear old webdriver, and install from scratch!
 reinstall: false
