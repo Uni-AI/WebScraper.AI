@@ -2,10 +2,12 @@ vagrant: false
 
 # Change this file to add dependency artifacts, repos, & roles!
 repo: [
+  { repo: "https://github.com/Uni-Apps/Browser.git", name: "Browser"},
   { repo: "https://github.com/Source-Graph/Virtualenv.python.git", name: "Virtualenv.python"},
   ]
 
 role: [
+  { git: "Browser", name: "Browser", path: "src/ansible/Browser"},
   { git: "Virtualenv.python", name: "Virtualenv", path: "src/ansible/Virtualenv"},
   ]
 
