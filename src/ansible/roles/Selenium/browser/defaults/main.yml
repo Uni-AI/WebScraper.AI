@@ -14,7 +14,8 @@ future: {
   },
 }
 
-default_browser: {"Chrome"}
+# default_browser: {"Chrome"}
+default_browser: {}
 
 browsers: "{{ my_browser | ansible.builtin.combine(default_browser) }}"
 
