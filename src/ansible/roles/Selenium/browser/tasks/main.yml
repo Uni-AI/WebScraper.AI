@@ -1,3 +1,5 @@
+# Install your Browser with Roles in uni.yml: `roles:\n- Browser/Chrome` This will detect which one you have intalled & it's version, and download the right WebDriver automatically.
+
 - include_tasks: fn/detect browser.yml
 
 - include_tasks: "{{i}}/main.yml"
