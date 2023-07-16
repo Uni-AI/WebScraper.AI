@@ -1,4 +1,10 @@
-- name: Pip install BeautifulSoup
+- name: install BeautifulSoup
   include_tasks: "{{fn}}/Pip_install.yml"
   loop:
   - beautifulsoup4
+ 
+# https://bobbyhadz.com/blog/couldnt-find-tree-builder-with-the-features-you-requested-lxml
+- name: install Parser
+  include_tasks: "{{fn}}/Pip_install.yml"
+  loop:
+  - lxml
