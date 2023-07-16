@@ -1,2 +1,2 @@
 dependencies:
-- Virtualenv
+- .dep/Virtualenv
