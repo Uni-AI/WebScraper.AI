@@ -1,4 +1,1 @@
-- name: Pull in .pre dependencies
-  hosts: localhost
-  roles:
-    - .pre
+.dep/pre/files/pre.yml

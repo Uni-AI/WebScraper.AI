@@ -4,4 +4,3 @@
     dest: "{{ playbook_dir }}/roles/{{ item.name }}"
     state: link
   loop: "{{ role }}"
-  when: vagrant
