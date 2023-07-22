@@ -1,0 +1,2 @@
+- https://www.newthinking.com/innovation/alternative-data-and-web-scraping-for-the-public-sector
+  - relation: https://www.newthinking.com/innovation/what-would-a-non-terrible-tech-industry-look-like
