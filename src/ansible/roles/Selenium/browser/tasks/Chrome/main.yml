@@ -7,8 +7,14 @@
 
 - name: Get Chrome version
   set_fact:
+    chrome_version:
+    - "{{ webdriver.Chrome.max_version }}"
+    - "{{ chrome.stdout.split('.')[0] | replace('Google Chrome ','') }}"
+
+- name: Set Chrome vars
+  set_fact:
     this_name: "Chrome"
-    this_version: "{{ chrome.stdout.split('.')[0] | replace('Google Chrome ','') }}"
+    this_version: "{{chrome_version | min}}"
     this_file_name: "{{ this_driver }}.zip"
     webdriver_path: "{{ webdriver_path + ava_dir + '/' + this_driver }}"
 

@@ -1,5 +1,3 @@
 dependencies:
-- .dep/Browser/Chrome
-- .dep/Browser/Chromium
 - Selenium/language/Python
 - Selenium/browser

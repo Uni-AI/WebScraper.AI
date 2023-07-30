@@ -2,13 +2,7 @@
 
 webdriver: {
   "Chrome": {
-    "Home": {
-      "site": "https://chromedriver.chromium.org/home",
-      "release": "https://chromedriver.chromium.org/downloads",
-      "doc": {
-        "Android": "https://chromedriver.chromium.org/getting-started/getting-started---android"
-        },
-      },
+    "max_version": 114,
     114: {
       "status": "Broken on Ubuntu 23.04!",
       "linux64": "https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip",
@@ -24,11 +18,6 @@ webdriver: {
     },
   },
   "Firefox": {
-    "Home": {
-      "site": "",
-      "doc": "https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/firefox.html",
-      "release": "https://github.com/mozilla/geckodriver/releases/",
-    },
     0.33: {
       "version": 0.33,
       "linux64": "https://github.com/mozilla/geckodriver/releases/download/v0.33.0/geckodriver-v0.33.0-linux-aarch64.tar.gz",

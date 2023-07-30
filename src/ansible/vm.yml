@@ -1,0 +1,9 @@
+- name: Setup Web-Scraping Libraries
+  hosts: vm
+  roles:
+    - .dep/Browser/Chrome
+    - .dep/Browser/Chromium
+    - get
+    - Beautiful Soup
+    - Selenium
+    - Requests

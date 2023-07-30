@@ -8,6 +8,8 @@
     reinstall: false # True
 
   roles:
+    - .dep/Browser/Chrome
+    - .dep/Browser/Chromium
     - get
     - Beautiful Soup
     - Selenium
